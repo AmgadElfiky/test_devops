@@ -1,5 +1,6 @@
-def getData(modules, num_days, module_name):
+def enterData(modules, num_days, module_name):
     days = []
+
     for day in range(1, num_days + 1):
         activities = []
         num_activities = int(
@@ -17,5 +18,6 @@ def getData(modules, num_days, module_name):
 
         day_data = {"day{}".format(day): activities}
         days.append(day_data)
-        module = {module_name: days}
-        modules.append(module)
+
+    module = {module_name: days}
+    modules.append(module)
