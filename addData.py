@@ -1,6 +1,6 @@
 def enterData(modules, num_days, module_name):
-    days = []
 
+    days = []
     for day in range(1, num_days + 1):
         activities = []
         num_activities = int(

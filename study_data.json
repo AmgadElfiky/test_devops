@@ -1,105 +1,48 @@
 [
   {
-    "topics": [
+    "devops": [
       {
-        "devops": [
+        "linux": [
           {
-            "linux": [
-              {
-                "day1": [
-                  "introduction"
-                ]
-              },
-              {
-                "day2": [
-                  "virtulaztion"
-                ]
-              },
-              {
-                "day3": [
-                  "linux commands",
-                  "intro to bash"
-                ]
-              },
-              {
-                "day4": [
-                  "bash"
-                ]
-              },
-              {
-                "day5": [
-                  "conclusion"
-                ]
-              }
+            "day1": [
+              "intro"
+            ]
+          }
+        ]
+      },
+      {
+        "python": [
+          {
+            "day1": [
+              "intro"
             ]
           },
           {
-            "python": [
-              {
-                "day1": [
-                  "introduction"
-                ]
-              },
-              {
-                "day2": [
-                  "coding"
-                ]
-              },
-              {
-                "day3": [
-                  "scripts"
-                ]
-              },
-              {
-                "day4": [
-                  "project"
-                ]
-              }
+            "day2": [
+              "code"
             ]
           }
         ]
-      }
-    ]
-  },
-  {
-    "topics": [
+      },
       {
-        "devops": [
+        "agile": [
           {
-            "agile": [
-              {
-                "day1": [
-                  "intro to SW engineering"
-                ]
-              },
-              {
-                "day2": [
-                  "agile method"
-                ]
-              },
-              {
-                "day3": [
-                  "scrum"
-                ]
-              }
+            "day1": [
+              "scrum"
             ]
           }
         ]
-      }
-    ]
-  },
-  {
-    "topics": [
+      },
       {
-        "SOC": [
+        "docker": [
           {
-            "network": [
-              {
-                "day1": [
-                  "intro",
-                  "CCNA"
-                ]
-              }
+            "day1": [
+              "intro"
+            ]
+          },
+          {
+            "day2": [
+              "images"
             ]
           }
         ]

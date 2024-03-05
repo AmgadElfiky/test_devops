@@ -1,16 +1,24 @@
 import json
-
-
-def append_to_json_file(filename, new_data):
+def append_to_json_file(filename, topic_name, new_module_data):
     try:
         with open(filename, "r") as file:
-            existing_data = json.load(file)
+            data = json.load(file)
     except (FileNotFoundError, json.JSONDecodeError):
-        existing_data = []
+        data = []
 
-    # Append the new data to the existing data
-    existing_data.append(new_data)
+    # Check if the topic name already exists
+    topic_found = False
+    for topic in data:
+        if topic_name in topic:
+            # Append the new module data to the existing topic
+            topic[topic_name].extend(new_module_data)
+            topic_found = True
+            break
 
-    # Write the combined data back to the file
+    # If the topic name doesn't exist, create a new entry
+    if not topic_found:
+        data.append({topic_name: new_module_data})
+
+    # Write the data back to the file
     with open(filename, "w") as file:
-        json.dump(existing_data, file, indent=2)
+        json.dump(data, file, indent=2)
