@@ -1,18 +1,91 @@
-{
-  "topics name": [
-    {
-      "devops": [
-        {
-          "linux": [
-            {
-              "day1": [
-                "intro",
-                "blabla"
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "topics": [
+      {
+        "devops": [
+          {
+            "linux": [
+              {
+                "day1": [
+                  "introduction"
+                ]
+              },
+              {
+                "day2": [
+                  "virtulaztion"
+                ]
+              },
+              {
+                "day3": [
+                  "linux commands",
+                  "intro to bash"
+                ]
+              },
+              {
+                "day4": [
+                  "bash"
+                ]
+              },
+              {
+                "day5": [
+                  "conclusion"
+                ]
+              }
+            ]
+          },
+          {
+            "python": [
+              {
+                "day1": [
+                  "introduction"
+                ]
+              },
+              {
+                "day2": [
+                  "coding"
+                ]
+              },
+              {
+                "day3": [
+                  "scripts"
+                ]
+              },
+              {
+                "day4": [
+                  "project"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "topics": [
+      {
+        "devops": [
+          {
+            "agile": [
+              {
+                "day1": [
+                  "intro to SW engineering"
+                ]
+              },
+              {
+                "day2": [
+                  "agile method"
+                ]
+              },
+              {
+                "day3": [
+                  "scrum"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
