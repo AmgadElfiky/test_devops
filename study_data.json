@@ -1,52 +1,45 @@
-[
-  {
-    "devops": [
-      {
-        "linux": [
-          {
-            "day1": [
-              "intro"
-            ]
-          }
-        ]
-      },
-      {
-        "python": [
-          {
-            "day1": [
-              "intro"
-            ]
-          },
-          {
-            "day2": [
-              "code"
-            ]
-          }
-        ]
-      },
-      {
-        "agile": [
-          {
-            "day1": [
-              "scrum"
-            ]
-          }
-        ]
-      },
-      {
-        "docker": [
-          {
-            "day1": [
-              "intro"
-            ]
-          },
-          {
-            "day2": [
-              "images"
-            ]
-          }
-        ]
-      }
-    ]
-  }
-]
+{
+  "devops": [
+    {
+      "linux": [
+        {
+          "day1": [
+            "sss"
+          ]
+        }
+      ]
+    },
+    {
+      "python": [
+        {
+          "day1": [
+            "intro"
+          ]
+        },
+        {
+          "day2": [
+            "code"
+          ]
+        }
+      ]
+    },
+    {
+      "agile": [
+        {
+          "day1": [
+            "intro"
+          ]
+        }
+      ]
+    },
+    {
+      "docker": [
+        {
+          "day1": [
+            "zxc"
+          ]
+        }
+      ]
+    }
+  ]
+}
