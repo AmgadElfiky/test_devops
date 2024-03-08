@@ -4,7 +4,38 @@
       "linux": [
         {
           "day1": [
+            "intro",
+            "intro 2"
+          ]
+        },
+        {
+          "day2": [
+            "about linux"
+          ]
+        },
+        {
+          "day3": [
+            "bash script"
+          ]
+        }
+      ]
+    },
+    {
+      "python": [
+        {
+          "day1": [
             "introduction"
+          ]
+        },
+        {
+          "day2": [
+            "coding"
+          ]
+        },
+        {
+          "day3": [
+            "scripts",
+            "project"
           ]
         }
       ]
