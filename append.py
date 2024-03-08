@@ -1,5 +1,6 @@
 import json
 
+
 def append_to_json_file(filename, topic_name, new_module_data):
     try:
         with open(filename, "r") as file:

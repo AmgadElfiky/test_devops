@@ -1,9 +1,18 @@
+# operations
 from append import append_to_json_file
 from addData import enterData
 from display import display_json_data
 from edit import edit_json_data
 from delete import delete_json_data
-import json
+
+# style
+import pyfiglet as pyg
+import os
+import sys
+
+sys.path.append(os.path.realpath("."))
+import inquirer
+from inquirer.themes import BlueComposure
 
 
 def build_module_data(topic_name):
@@ -40,26 +49,65 @@ def build_module_data(topic_name):
 
 
 def main():
+    # welcome msg
+    welcome_message = pyg.figlet_format("Welcome To MindTreeED")
+    print(welcome_message)
+
+    # Choices
     while True:
-        action = input(
-            "Choose action: \n(1) Add data \n(2) Edit data \n(3) Display JSON data \n(4) Delete data \n(5) Exit:\nChoice : "
-        )
-        if action == "1":
+        # Define the list of topics
+        Options = [
+            "ADD",
+            "UPDATE",
+            "DISPLAY",
+            "DELETE",
+            "EXIT",
+        ]
+
+        # Define the questions
+        Choices_questions = [
+            inquirer.List(
+                "Choice",
+                message="Choose... ",
+                choices=Options,
+            )
+        ]
+
+        # Prompt the user to choose a topic
+        answers = inquirer.prompt(Choices_questions, theme=BlueComposure())
+        selected_option = answers["Choice"]
+
+        # list of choices
+        if selected_option == "ADD":
+            # welcome message
+            add_script = pyg.figlet_format("Add Script")
+            print(add_script)
             topic_name = input("Enter topic name: ")
             module_data = build_module_data(topic_name)
             append_to_json_file("study_data.json", topic_name, module_data)
             print("JSON data appended successfully.")
-        elif action == "2":
+        elif selected_option == "UPDATE":
+            # welcome message
+            edit_script = pyg.figlet_format("Edit Script")
+            print(edit_script)
             edit_json_data("study_data.json")
-        elif action == "3":
+        elif selected_option == "DISPLAY":
+            # welcome message
+            display_script = pyg.figlet_format("Display Script")
+            print(display_script)
             display_json_data("study_data.json")
-        elif action == "4":
+        elif selected_option == "DELETE":
+            # welcome message
+            delete_script = pyg.figlet_format("Delete Script")
+            print(delete_script)
             delete_json_data("study_data.json")
-        elif action == "5":
-            print("Exiting program.")
+        elif selected_option == "EXIT":
+            goodbye_message = pyg.figlet_format("Thanks For Using Our System")
+            print(goodbye_message)
             break
         else:
             print("Invalid action. Please choose a valid option.")
+        # print("You selected: ", selected_option)
 
 
 if __name__ == "__main__":
