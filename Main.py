@@ -2,6 +2,7 @@ from append import append_to_json_file
 from addData import enterData
 from display import display_json_data
 from edit import edit_json_data
+from delete import delete_json_data
 import json
 
 
@@ -38,24 +39,10 @@ def build_module_data(topic_name):
     return modules
 
 
-# def deleteData(item_data):
-#     with open("study_data.json", "r") as file:
-#         data = json.load(file)
-#     # print(data)
-#     for item in data:
-#         for details in item:
-#             print("item : ", details)
-#             if item_data in details:
-#                 data.pop(item_data)
-#                 with open("study_data.json", "w") as delete:
-#                     json.dump(data, delete, indent=2)
-#                     print("Deleted Successfully")
-
-
 def main():
     while True:
         action = input(
-            "Choose action: (1) Add data (2) Edit data (3) Display JSON data (4) Exit: "
+            "Choose action: \n(1) Add data \n(2) Edit data \n(3) Display JSON data \n(4) Delete data \n(5) Exit:\nChoice : "
         )
         if action == "1":
             topic_name = input("Enter topic name: ")
@@ -67,6 +54,8 @@ def main():
         elif action == "3":
             display_json_data("study_data.json")
         elif action == "4":
+            delete_json_data("study_data.json")
+        elif action == "5":
             print("Exiting program.")
             break
         else:

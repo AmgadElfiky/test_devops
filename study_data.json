@@ -1,15 +1,6 @@
 {
   "devops": [
     {
-      "agile": [
-        {
-          "day1": [
-            "intro"
-          ]
-        }
-      ]
-    },
-    {
       "linux": [
         {
           "day1": [
@@ -19,7 +10,7 @@
       ]
     },
     {
-      "python": [
+      "agile": [
         {
           "day1": [
             "introduction"
