@@ -1,29 +1,6 @@
 {
   "devops": [
     {
-      "linux": [
-        {
-          "day1": [
-            "sss"
-          ]
-        }
-      ]
-    },
-    {
-      "python": [
-        {
-          "day1": [
-            "intro"
-          ]
-        },
-        {
-          "day2": [
-            "code"
-          ]
-        }
-      ]
-    },
-    {
       "agile": [
         {
           "day1": [
@@ -33,10 +10,19 @@
       ]
     },
     {
-      "docker": [
+      "linux": [
         {
           "day1": [
-            "zxc"
+            "introduction"
+          ]
+        }
+      ]
+    },
+    {
+      "python": [
+        {
+          "day1": [
+            "introduction"
           ]
         }
       ]

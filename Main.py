@@ -1,5 +1,7 @@
 from append import append_to_json_file
 from addData import enterData
+from display import display_json_data
+from edit import edit_json_data
 import json
 
 
@@ -51,11 +53,24 @@ def build_module_data(topic_name):
 
 
 def main():
-
-    topic_name = input("Enter topic name: ")
-    module_data = build_module_data(topic_name)
-    append_to_json_file("study_data.json", topic_name, module_data)
-    print("JSON data appended successfully.")
+    while True:
+        action = input(
+            "Choose action: (1) Add data (2) Edit data (3) Display JSON data (4) Exit: "
+        )
+        if action == "1":
+            topic_name = input("Enter topic name: ")
+            module_data = build_module_data(topic_name)
+            append_to_json_file("study_data.json", topic_name, module_data)
+            print("JSON data appended successfully.")
+        elif action == "2":
+            edit_json_data("study_data.json")
+        elif action == "3":
+            display_json_data("study_data.json")
+        elif action == "4":
+            print("Exiting program.")
+            break
+        else:
+            print("Invalid action. Please choose a valid option.")
 
 
 if __name__ == "__main__":
