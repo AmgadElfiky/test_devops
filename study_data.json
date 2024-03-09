@@ -5,7 +5,8 @@
         {
           "day1": [
             "intro",
-            "intro 2"
+            "intro 2",
+            "ooooops"
           ]
         },
         {
@@ -15,7 +16,8 @@
         },
         {
           "day3": [
-            "bash script"
+            "bash script",
+            "labal"
           ]
         }
       ]
@@ -59,6 +61,16 @@
         {
           "day2": [
             "sadsad"
+          ]
+        }
+      ]
+    },
+    {
+      "docker": [
+        {
+          "day1": [
+            "introduction",
+            "image & containers"
           ]
         }
       ]
