@@ -34,7 +34,7 @@ def add_activity_data(fileName):
                         # index_num += 1
                         del new_day[index_num]
                         print("REMOVED !!!")
-                        break
+                        break 
 
     # Write the updated JSON data back to the file
     with open(fileName, "w") as file:
