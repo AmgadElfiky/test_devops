@@ -4,7 +4,8 @@ from addData import enterData
 from display import display_json_data
 from edit import edit_json_data
 from delete import delete_json_data
-from addDayData import add_activity_data
+# from addDayData import add_activity_data
+from test import add_activity_data
 
 # style
 import pyfiglet as pyg

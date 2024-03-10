@@ -4,9 +4,7 @@
       "linux": [
         {
           "day1": [
-            "intro",
-            "intro 2",
-            "ooooops"
+            "intro 2"
           ]
         },
         {
@@ -16,8 +14,7 @@
         },
         {
           "day3": [
-            "bash script",
-            "labal"
+            "bash script"
           ]
         }
       ]
