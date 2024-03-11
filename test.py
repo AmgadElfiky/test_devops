@@ -25,16 +25,8 @@ def add_activity_data(fileName):
             for day in module[module_name]:
                 if any(day_regex.match(key) for key in day):
                     # print("day: ", day)
-                    new_day = day[day_name]
-                    for index, day_item in enumerate(new_day):
-                        print(f"index: {index}, day_item: {day_item}")
-                        index_num = int(
-                            input("choose the index of activity you want to change: ")
-                        )
-                        # index_num += 1
-                        del new_day[index_num]
-                        print("REMOVED !!!")
-                        break 
+                    new_item = input("Enter new activity: ")
+                    day[day_name].append(new_item)
 
     # Write the updated JSON data back to the file
     with open(fileName, "w") as file:

@@ -4,7 +4,8 @@
       "linux": [
         {
           "day1": [
-            "intro 2"
+            "intro 2",
+            "intro222"
           ]
         },
         {
@@ -33,7 +34,6 @@
         },
         {
           "day3": [
-            "scripts",
             "project"
           ]
         }
@@ -63,11 +63,11 @@
       ]
     },
     {
-      "docker": [
+      "cloud": [
         {
           "day1": [
-            "introduction",
-            "image & containers"
+            "intro",
+            "types of cloud"
           ]
         }
       ]

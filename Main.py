@@ -1,13 +1,24 @@
 # operations
 from append import append_to_json_file
+
+# add scripts
 from addData import enterData
+from addData import add_activity_data
+
+# display
 from display import display_json_data
+
+# edit
 from edit import edit_json_data
+
+# delete scripts
 from delete import delete_json_data
+from delete import delete_activity_data
+
 # from addDayData import add_activity_data
 from test import add_activity_data
 
-# style
+# style libraries
 import pyfiglet as pyg
 import os
 import sys
@@ -122,7 +133,30 @@ def main():
             # welcome message
             delete_script = pyg.figlet_format("Delete Script")
             print(delete_script)
-            delete_json_data(file_name)
+
+            addOptions = [
+                "DELETE MODULE",
+                "DELETE ACTIVITY IN MODULE",
+            ]
+
+            # Define the questions
+            Choices_questions = [
+                inquirer.List(
+                    "deleteChoice",
+                    message="Choose... ",
+                    choices=addOptions,
+                )
+            ]
+
+            # Prompt the user to choose a topic
+            answers = inquirer.prompt(Choices_questions, theme=BlueComposure())
+            selected_add_option = answers["deleteChoice"]
+
+            if selected_add_option == "DELETE MODULE":
+                delete_json_data(file_name)
+                print("JSON data deleted successfully.")
+            elif selected_add_option == "DELETE ACTIVITY IN MODULE":
+                delete_activity_data(file_name)
         elif selected_option == "EXIT":
             goodbye_message = pyg.figlet_format("Thanks For Using Our System")
             print(goodbye_message)
