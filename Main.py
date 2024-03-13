@@ -63,7 +63,7 @@ def build_module_data(topic_name):
 
 
 def main():
-    file_name = "studyData.json"
+    file_name = "data.json"
     # welcome msg
     welcome_message = pyg.figlet_format("Welcome To MindTreeED")
     print(welcome_message)
