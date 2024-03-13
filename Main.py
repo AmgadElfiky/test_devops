@@ -9,14 +9,15 @@ from addData import add_activity_data
 from display import display_json_data
 
 # edit
-from edit import edit_json_data
+# from edit import edit_json_data
+from edit import edit_activity_data
 
 # delete scripts
 from delete import delete_json_data
 from delete import delete_activity_data
 
-# from addDayData import add_activity_data
-from test import add_activity_data
+
+from test import edit_data
 
 # style libraries
 import pyfiglet as pyg
@@ -62,7 +63,7 @@ def build_module_data(topic_name):
 
 
 def main():
-    file_name = "study_data.json"
+    file_name = "studyData.json"
     # welcome msg
     welcome_message = pyg.figlet_format("Welcome To MindTreeED")
     print(welcome_message)
@@ -123,7 +124,29 @@ def main():
             # welcome message
             edit_script = pyg.figlet_format("Edit Script")
             print(edit_script)
-            edit_json_data(file_name)
+            UpdateOptions = [
+                "UPDATE NEW MODULE",
+                "UPDATE ACTIVITY IN MODULE",
+            ]
+
+            # Define the questions
+            Choices_questions = [
+                inquirer.List(
+                    "UpdateChoice",
+                    message="Choose... ",
+                    choices=UpdateOptions,
+                )
+            ]
+
+            # Prompt the user to choose a topic
+            answers = inquirer.prompt(Choices_questions, theme=BlueComposure())
+            selected_update_option = answers["UpdateChoice"]
+
+            if selected_update_option == "UPDATE NEW MODULE":
+                print("test")
+                # edit_data(file_name)
+            elif selected_update_option == "UPDATE ACTIVITY IN MODULE":
+                edit_activity_data(file_name)
         elif selected_option == "DISPLAY":
             # welcome message
             display_script = pyg.figlet_format("Display Script")

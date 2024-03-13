@@ -2,7 +2,7 @@ import re
 import json
 
 
-def add_activity_data(fileName):
+def edit_data(fileName):
     # Load the JSON data from the file
     with open(fileName, "r") as file:
         data = json.load(file)
@@ -10,23 +10,19 @@ def add_activity_data(fileName):
     # Prompt the user for module name and day name
     topic_name = input("Enter the Topic name (e.g., devops): ")
     module_name = input("Enter the Module name (e.g., linux): ")
-    day_name = input("Enter the day name (e.g., day1): ")
-    # day_index = input("Enter the day index (e.g., intro): ")
+
 
     # Define regular expressions for the user input module and day
     module_regex = re.compile(rf"\b{module_name}\b", re.IGNORECASE)
-    day_regex = re.compile(rf"\b{day_name}\b", re.IGNORECASE)
-    # index_regex = re.compile(rf"\b{day_index}\b", re.IGNORECASE)
+
 
     # Search for the specified module and day
     for module in data[topic_name]:
         if any(module_regex.match(key) for key in module):
-            # print("module: ", module)
-            for day in module[module_name]:
-                if any(day_regex.match(key) for key in day):
-                    # print("day: ", day)
-                    new_item = input("Enter new activity: ")
-                    day[day_name].append(new_item)
+            print("module: ", module)
+            for item in module:
+                item = input("Enter the new item: ")
+                module.append(item)
 
     # Write the updated JSON data back to the file
     with open(fileName, "w") as file:
